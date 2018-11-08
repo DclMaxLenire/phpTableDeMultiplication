@@ -1,15 +1,24 @@
 <?php
-$tableSelection = $_GET['table']; // Prend la valeur de la table choisis//
+        // Prend la valeur de la table choisis//
+$tableSelection = $_GET['table'];
+        // Vas chercher les deux dernière caractère de ma valeur //
+$chiffre = substr($tableSelection, -2, 5);
+        // Transforme cette valeur en chiffre rond, il supprime le 0//
+$chiffreTable = intval($chiffre);
 ?>
 
-<?php
- if ($tableSelection == "TableDe1"):// nous envoie sur la page de la table choisis //
-    header('Location: tableDe1.php');
-endif;
-    ?>
 
-    <?php
- if ($tableSelection == "TableDe2"):
-    echo "TESSSSSSSSSSTEEEEEEEEEEEEEEEEEEEEEE 2";
-endif;
-    ?>
+<?php include 'index.php'; ?>
+
+
+<?php
+
+        // Crée le tableau et calcul //
+    for ($j = 1; $j <= 30; $j++)
+    {
+        echo $chiffreTable.' x '.$j.' = '.$chiffreTable*$j.'<br>';
+    }
+
+?>
+
+    
