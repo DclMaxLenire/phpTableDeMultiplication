@@ -47,3 +47,13 @@ p {
     margin-left:20%;
     margin-right:20%;
 }
+.affichageTable {
+    display:flex;
+    flex-direction:row;
+}
+.de1a15 {
+    width:50%;
+}
+.de16a30 {
+    width:50%;
+}
